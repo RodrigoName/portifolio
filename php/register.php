@@ -1,11 +1,5 @@
 <?php
 
-$field_first_name = $_POST['names'];
-
-$field_email = $_POST['email'];
-
-$field_ticket = $_POST['ticket'];
-
 $mail_to = 'rlsnetvendas@gmail.com';
 
 $subject = 'Message from a site visitor '.$field_first_name;
@@ -25,14 +19,14 @@ $mail_status = mail($mail_to, $subject, $body_message, $headers);
 
 if ($mail_status) { ?>
 	<script language="javascript" type="text/javascript">
-		//alert('Thank you for the message. We will contact you shortly.');
+		alert('Thank you for the message. We will contact you shortly.');
 		window.location = 'index.html';
 	</script>
 <?php
 }
 else { ?>
 	<script language="javascript" type="text/javascript">
-		//alert('Message failed. Please, send an email to gordon@template-help.com');
+		alert('Message failed. Please, send an email to rlsnetvendas@gmail.com');
 		window.location = 'index.html';
 	</script>
 <?php
